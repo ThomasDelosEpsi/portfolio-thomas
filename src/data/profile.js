@@ -93,7 +93,13 @@ export const stack = [
     svgLogo: simpleIcon('n8n', 'EA4B71'),
     logoScale: 1.25
   },
-  { name: 'UiPath', color: '#FA4616', description: 'Automatisation RPA, REFramework, Orchestrator', render: 'token' },
+  {
+    name: 'UiPath',
+    color: '#FA4616',
+    description: 'Automatisation RPA, REFramework, Orchestrator',
+    render: 'token',
+    logoImage: 'images/logos/uipath.png'
+  },
   { name: 'RPA', color: '#14B8A6', description: 'Automatisation de processus métier répétitifs', render: 'token' },
   { name: 'LLM locaux', color: '#8B5CF6', description: 'Modèles de langage auto-hébergés', render: 'token' },
   { name: 'Agents RAG', color: '#22C55E', description: 'Recherche augmentée par génération', render: 'token' },
@@ -114,6 +120,7 @@ export const stack = [
     description: 'APIs et applications MVC en C# / ASP.NET',
     render: 'logoGltf',
     modelPath: '/models/dotnet.glb',
+    logoImage: 'images/logos/dotnet.png',
     svgLogo: simpleIcon('dotnet', '512BD4')
   },
   {
@@ -122,13 +129,15 @@ export const stack = [
     description: 'Développement web côté serveur',
     render: 'logoGltf',
     modelPath: '/models/php.glb',
+    logoImage: 'images/logos/php.png',
     svgLogo: simpleIcon('php', '777BB4')
   },
   {
     name: 'React',
     color: '#61DAFB',
     description: 'Interfaces web modernes & réactives',
-    render: 'reactLogo'
+    render: 'reactLogo',
+    logoImage: 'images/logos/react.png'
   },
   {
     name: 'PostgreSQL',
@@ -136,6 +145,7 @@ export const stack = [
     description: 'Base de données relationnelle',
     render: 'logoGltf',
     modelPath: '/models/postgres.glb',
+    logoImage: 'images/logos/postgresql.png',
     svgLogo: simpleIcon('postgresql', '4169E1')
   },
   {
@@ -144,6 +154,7 @@ export const stack = [
     description: 'Base de données NoSQL orientée documents',
     render: 'logoGltf',
     modelPath: '/models/mongodb.glb',
+    logoImage: 'images/logos/mongodb.png',
     svgLogo: simpleIcon('mongodb', '47A248')
   },
   {
@@ -152,6 +163,7 @@ export const stack = [
     description: 'Backend-as-a-Service (DB, auth, storage)',
     render: 'logoGltf',
     modelPath: '/models/supabase.glb',
+    logoImage: 'images/logos/supabase.png',
     svgLogo: simpleIcon('supabase', '3FCF8E')
   }
 ]

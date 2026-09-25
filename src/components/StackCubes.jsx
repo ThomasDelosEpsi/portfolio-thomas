@@ -63,17 +63,18 @@ function StackItem({ item, x, y, z, worldY }) {
   return (
     <group position={[x, baseY, z]}>
       <group ref={groupRef} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut}>
-        {isToken ? (
-          <Token3D label={item.name} color={item.color} size={ITEM_SIZE} />
-        ) : hasLogoImage ? (
+        {hasLogoImage ? (
           // Rendu 3D "glossy" pré-généré (image) : déjà éclairé et ombré, il flotte
           // librement sans socle derrière (contrairement aux autres types de logo).
+          // Prioritaire sur tous les autres modes de rendu quand disponible.
           <LogoImage3D
             url={withBase(item.logoImage)}
             name={item.name}
             color={item.color}
             size={ITEM_SIZE}
           />
+        ) : isToken ? (
+          <Token3D label={item.name} color={item.color} size={ITEM_SIZE} />
         ) : (
           <>
             {/* Fond neutre + fin anneau de couleur : les logos GLTF/codés n'ont pas
