@@ -1,17 +1,18 @@
 // src/components/SideNav.jsx
-import { Home, User, Layers, Boxes, Mail } from 'lucide-react'
+import { Home, User, Layers, Boxes, Award, Mail } from 'lucide-react'
 
 const ITEMS = [
   { href: '#hero', icon: Home, label: 'Accueil' },
   { href: '#about', icon: User, label: 'À propos' },
   { href: '#stack', icon: Layers, label: 'Stack' },
   { href: '#projects', icon: Boxes, label: 'Projets' },
+  { href: '#trust', icon: Award, label: 'Confiance' },
   { href: '#contact', icon: Mail, label: 'Contact' }
 ]
 
 /**
  * Navigation verticale fixée sur le bord droit de l'écran (icônes seules),
- * dans l'esprit du portfolio de référence. `activeIndex` (0..4, continu) sert
+ * dans l'esprit du portfolio de référence. `activeIndex` (0..5, continu) sert
  * à surligner l'icône de la section actuellement visible.
  */
 export default function SideNav({ activeIndex = 0 }) {

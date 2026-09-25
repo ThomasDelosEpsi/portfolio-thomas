@@ -9,8 +9,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Couleurs posées en CSS brut (pas via @apply) : un @apply sur une couleur
+   custom ici peut, en mode dev Vite, s'exécuter avant que Tailwind ait fini
+   de scanner les fichiers JSX et lever "class does not exist" au tout premier
+   chargement. Valeurs alignées sur tailwind.config.js (bg / ink). */
 body {
-  @apply bg-bg text-ink font-body antialiased overflow-x-hidden;
+  background-color: #f7f6fb;
+  color: #14141f;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

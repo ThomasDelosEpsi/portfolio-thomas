@@ -30,6 +30,35 @@ export const about = {
   ]
 }
 
+// Témoignage tiré du bilan de fin d'alternance rédigé par mon manager (3 ans passés
+// dans l'équipe RPA/OCR de Lyreco). Extrait fidèle du document original.
+export const trust = {
+  company: 'Lyreco Management',
+  role: 'Alternant Chef de Projet RPA & IA',
+  period: 'Septembre 2023 — Septembre 2026 (3 ans)',
+  authorName: 'Mathieu Lison',
+  authorRole: 'IT IS Office Manager — RPA/OCR',
+  quote:
+    "Une progression importante en autonomie et en maturité professionnelle. Thomas a su évoluer avec l'équipe et avec les technologies que nous utilisons, passant du développement RPA à des sujets de gouvernance, d'industrialisation, d'architecture, d'API et désormais d'intelligence artificielle.",
+  closingQuote:
+    "De l'alternant qui découvre l'environnement RPA au professionnel capable de prendre en charge des sujets structurants : le chemin parcouru en trois ans est important.",
+  stats: [
+    { value: '45', label: 'robots RPA supervisés', context: 'M.A.P. — Automation Hub Dashboard' },
+    { value: '12', label: 'modules réutilisables', context: 'Toolbox RPA' },
+    { value: '8', label: 'tenants migrés', context: 'Migration Automation Hub' },
+    { value: '300+', label: 'automatisations analysées', context: 'Migration des tenants' },
+    { value: '18', label: 'User Stories rédigées', context: 'Robot VDT — pilotage produit' }
+  ],
+  pilotedTopics: [
+    'Gouvernance RPA UiPath',
+    'Robot VDT',
+    'STEP Asset Upload — Suisse',
+    'Chatbot RPA / RAG',
+    'Grille de qualification des processus',
+    'Monitoring RPA'
+  ]
+}
+
 // Stack technique complète, reprise du CV. Chaque item déclare comment il doit être
 // rendu en 3D (voir StackCubes.jsx) :
 // - 'logoGltf'  : modèle .glb externe (dépose le fichier dans public/models/). Tant
