@@ -2,6 +2,8 @@
 
 Portfolio one-page immersif construit avec React + Vite + React Three Fiber, Drei, Framer Motion et Tailwind CSS.
 
+**Live :** https://thomasdelosepsi.github.io/portfolio-thomas/
+
 ## Démarrage local
 
 ```bash
@@ -13,13 +15,13 @@ npm run dev
 
 Deux options, choisis-en une (pas besoin des deux) :
 
-### Option A — GitHub Actions (recommandée)
+### Option A — GitHub Actions
 
-Le workflow [.github/workflows/deploy.yml](.github/workflows/deploy.yml) build et déploie automatiquement à chaque push sur `main`.
+Le workflow modèle est en [.github/deploy.yml.example](.github/deploy.yml.example) — renomme-le en `.github/workflows/deploy.yml` une fois que ton token GitHub a le scope `workflow` (`gh auth refresh -s workflow`), il build et déploie alors automatiquement à chaque push sur `main`.
 
-1. Pousse ce projet sur un repo GitHub nommé `portfolio-3d` (ou modifie `REPO_NAME` dans [vite.config.js](vite.config.js) si tu choisis un autre nom).
+1. Repo GitHub actuel : `portfolio-thomas` (modifie `REPO_NAME` dans [vite.config.js](vite.config.js) si tu le renommes à nouveau).
 2. Dans le repo GitHub : **Settings → Pages → Source → GitHub Actions**.
-3. Push sur `main` : le site est déployé automatiquement sur `https://<ton-user>.github.io/portfolio-3d/`.
+3. Push sur `main` : le site est déployé automatiquement sur `https://thomasdelosepsi.github.io/portfolio-thomas/`.
 
 ### Option B — déploiement manuel via `gh-pages`
 
