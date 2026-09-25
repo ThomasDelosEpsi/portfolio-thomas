@@ -70,14 +70,33 @@ const simpleIcon = (slug, hex) => `https://cdn.simpleicons.org/${slug}/${hex}`
 
 export const stack = [
   // Gestion de Projet
-  { name: 'KPI & ROI', color: '#f59e0b', description: 'Suivi de KPI & calcul de ROI', render: 'token' },
-  { name: 'Agile', color: '#f59e0b', description: 'Méthodologie Agile & gestion des risques', render: 'token' },
-  { name: 'Découverte', color: '#f59e0b', description: 'Phase de découverte & analyse des besoins', render: 'token' },
+  {
+    name: 'KPI & ROI',
+    color: '#f59e0b',
+    description: 'Suivi de KPI & calcul de ROI',
+    render: 'token',
+    logoImage: 'images/logos/kpi-roi.png'
+  },
+  {
+    name: 'Agile',
+    color: '#f59e0b',
+    description: 'Méthodologie Agile & gestion des risques',
+    render: 'token',
+    logoImage: 'images/logos/agile.png'
+  },
+  {
+    name: 'Découverte',
+    color: '#f59e0b',
+    description: 'Phase de découverte & analyse des besoins',
+    render: 'token',
+    logoImage: 'images/logos/decouverte.png'
+  },
   {
     name: 'Contacts métiers',
     color: '#f59e0b',
     description: 'Relation et coordination avec les équipes métier',
-    render: 'token'
+    render: 'token',
+    logoImage: 'images/logos/contacts-metiers.png'
   },
   { name: 'RFP', color: '#f59e0b', description: "Gestion d'appels d'offres", render: 'token' },
   // IA & Automatisation
