@@ -98,7 +98,13 @@ export const stack = [
     render: 'token',
     logoImage: 'images/logos/contacts-metiers.png'
   },
-  { name: 'RFP', color: '#f59e0b', description: "Gestion d'appels d'offres", render: 'token' },
+  {
+    name: 'RFP',
+    color: '#f59e0b',
+    description: "Gestion d'appels d'offres",
+    render: 'token',
+    logoImage: 'images/logos/rfp.png'
+  },
   // IA & Automatisation
   {
     name: 'n8n',
@@ -119,10 +125,34 @@ export const stack = [
     render: 'token',
     logoImage: 'images/logos/uipath.png'
   },
-  { name: 'RPA', color: '#14B8A6', description: 'Automatisation de processus métier répétitifs', render: 'token' },
-  { name: 'LLM locaux', color: '#8B5CF6', description: 'Modèles de langage auto-hébergés', render: 'token' },
-  { name: 'Agents RAG', color: '#22C55E', description: 'Recherche augmentée par génération', render: 'token' },
-  { name: 'ABBYY', color: '#E30613', description: "OCR & extraction intelligente de documents", render: 'token' },
+  {
+    name: 'RPA',
+    color: '#14B8A6',
+    description: 'Automatisation de processus métier répétitifs',
+    render: 'token',
+    logoImage: 'images/logos/rpa.png'
+  },
+  {
+    name: 'LLM locaux',
+    color: '#8B5CF6',
+    description: 'Modèles de langage auto-hébergés',
+    render: 'token',
+    logoImage: 'images/logos/llm-locaux.png'
+  },
+  {
+    name: 'Agents RAG',
+    color: '#22C55E',
+    description: 'Recherche augmentée par génération',
+    render: 'token',
+    logoImage: 'images/logos/agents-rag.png'
+  },
+  {
+    name: 'ABBYY',
+    color: '#E30613',
+    description: "OCR & extraction intelligente de documents",
+    render: 'token',
+    logoImage: 'images/logos/abbyy.png'
+  },
   // Développement & Data
   {
     name: 'Python',
