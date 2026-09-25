@@ -75,7 +75,7 @@ export default function ParticlesBackground() {
           const dy = dots[i].y - dots[j].y
           const dist = Math.sqrt(dx * dx + dy * dy)
           if (dist < LINK_DISTANCE) {
-            ctx.strokeStyle = `rgba(239, 68, 68, ${0.12 * (1 - dist / LINK_DISTANCE)})`
+            ctx.strokeStyle = `rgba(20, 20, 31, ${0.12 * (1 - dist / LINK_DISTANCE)})`
             ctx.lineWidth = 1
             ctx.beginPath()
             ctx.moveTo(dots[i].x, dots[i].y)
@@ -83,7 +83,7 @@ export default function ParticlesBackground() {
             ctx.stroke()
           }
         }
-        ctx.fillStyle = 'rgba(249, 115, 22, 0.55)'
+        ctx.fillStyle = 'rgba(234, 88, 12, 0.65)'
         ctx.beginPath()
         ctx.arc(dots[i].x, dots[i].y, 1.6, 0, Math.PI * 2)
         ctx.fill()

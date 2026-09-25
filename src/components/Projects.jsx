@@ -40,7 +40,7 @@ const ProjectCard = forwardRef(function ProjectCard({ project, index }, ref) {
           </div>
           <ArrowUpRight
             size={20}
-            className="text-muted group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
+            className="text-muted group-hover:text-ink group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"
           />
         </div>
 
@@ -54,7 +54,7 @@ const ProjectCard = forwardRef(function ProjectCard({ project, index }, ref) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs px-3 py-1 rounded-full bg-white/5 border border-white/10 text-muted"
+              className="text-xs px-3 py-1 rounded-full bg-ink/[0.04] border border-ink/10 text-muted"
             >
               {tag}
             </span>
@@ -96,7 +96,7 @@ export default function Projects() {
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${
               filter === f.id
                 ? 'bg-primary border-primary text-white'
-                : 'border-white/15 text-muted hover:text-white hover:border-white/30'
+                : 'border-ink/15 text-muted hover:text-ink hover:border-ink/30'
             }`}
           >
             {f.label}

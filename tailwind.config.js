@@ -5,12 +5,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        bg: '#0a0e1f',
-        surface: '#111633',
+        bg: '#f7f6fb',
+        surface: '#ffffff',
+        ink: '#14141f',
         primary: '#ef4444',
-        secondary: '#f97316',
-        accent: '#fb7185',
-        muted: '#8b93b8'
+        secondary: '#ea580c',
+        accent: '#e11d48',
+        muted: '#6b7280'
       },
       fontFamily: {
         display: ['"Space Grotesk"', 'sans-serif'],

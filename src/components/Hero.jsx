@@ -21,8 +21,8 @@ function ProjectsBadge() {
           </textPath>
         </text>
       </svg>
-      <span className="absolute inset-3 rounded-full border border-white/15 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-colors">
-        <ArrowRight size={22} className="text-white group-hover:translate-x-0.5 transition-transform" />
+      <span className="absolute inset-3 rounded-full border border-ink/15 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-colors">
+        <ArrowRight size={22} className="text-ink group-hover:text-primary group-hover:translate-x-0.5 transition-transform" />
       </span>
     </a>
   )
@@ -61,7 +61,7 @@ export default function Hero() {
           <div className="flex items-center gap-8">
             <a
               href="#contact"
-              className="px-6 py-3 rounded-full bg-primary hover:bg-primary/80 transition-colors font-medium shadow-glow"
+              className="px-6 py-3 rounded-full bg-primary text-white hover:bg-primary/80 transition-colors font-medium shadow-glow"
             >
               Me contacter
             </a>

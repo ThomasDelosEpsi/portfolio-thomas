@@ -59,7 +59,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 placeholder="Votre nom"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors"
+                className="w-full bg-ink/[0.03] border border-ink/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors"
               />
             </div>
             <div>
@@ -71,7 +71,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="vous@exemple.com"
-                className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors"
+                className="w-full bg-ink/[0.03] border border-ink/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors"
               />
             </div>
           </div>
@@ -85,13 +85,13 @@ export default function Contact() {
               value={form.message}
               onChange={handleChange}
               placeholder="Votre message..."
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none"
+              className="w-full bg-ink/[0.03] border border-ink/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-primary hover:bg-primary/80 transition-colors font-medium shadow-glow disabled:opacity-60"
+            className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-primary text-white hover:bg-primary/80 transition-colors font-medium shadow-glow disabled:opacity-60"
           >
             {sent ? (
               <>

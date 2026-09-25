@@ -28,7 +28,7 @@ export default function About() {
             {about.highlights.map((h) => (
               <div
                 key={h.label}
-                className="rounded-xl bg-white/5 border border-white/10 p-4 text-center hover:border-secondary/50 transition-colors"
+                className="rounded-xl bg-ink/[0.03] border border-ink/10 p-4 text-center hover:border-secondary/50 transition-colors"
               >
                 <p className="text-xs uppercase tracking-wider text-muted mb-1">{h.label}</p>
                 <p className="font-medium text-sm md:text-base">{h.value}</p>

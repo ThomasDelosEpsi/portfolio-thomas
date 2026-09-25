@@ -26,7 +26,7 @@ export default function SideNav({ activeIndex = 0 }) {
           aria-label={label}
           title={label}
           className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
-            i === activeI ? 'bg-primary text-white' : 'text-muted hover:text-white hover:bg-white/10'
+            i === activeI ? 'bg-primary text-white' : 'text-muted hover:text-ink hover:bg-ink/5'
           }`}
         >
           <Icon size={18} />
