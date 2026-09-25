@@ -6,7 +6,9 @@ import { stack } from '../data/profile'
 import Token3D from './skills/Token3D'
 import LogoGLTF from './skills/LogoGLTF'
 import LogoSVG3D from './skills/LogoSVG3D'
+import LogoImage3D from './skills/LogoImage3D'
 import ReactLogo3D from './skills/ReactLogo3D'
+import { withBase } from '../lib/withBase'
 
 const ITEM_SIZE = 1.15
 
@@ -24,6 +26,7 @@ function StackItem({ item, x, y, z, worldY }) {
 
   const baseY = worldY + y
   const isToken = item.render === 'token'
+  const hasLogoImage = !!item.logoImage
 
   useFrame((state) => {
     if (!groupRef.current) return
@@ -62,6 +65,15 @@ function StackItem({ item, x, y, z, worldY }) {
       <group ref={groupRef} onPointerOver={handlePointerOver} onPointerOut={handlePointerOut}>
         {isToken ? (
           <Token3D label={item.name} color={item.color} size={ITEM_SIZE} />
+        ) : hasLogoImage ? (
+          // Rendu 3D "glossy" pré-généré (image) : déjà éclairé et ombré, il flotte
+          // librement sans socle derrière (contrairement aux autres types de logo).
+          <LogoImage3D
+            url={withBase(item.logoImage)}
+            name={item.name}
+            color={item.color}
+            size={ITEM_SIZE}
+          />
         ) : (
           <>
             {/* Fond neutre + fin anneau de couleur : les logos GLTF/codés n'ont pas

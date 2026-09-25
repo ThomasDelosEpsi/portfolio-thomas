@@ -87,8 +87,9 @@ export const stack = [
     description: 'Orchestration de workflows & agents IA',
     render: 'logoGltf',
     modelPath: '/models/n8n.glb',
-    // Le logo n8n est fait de petits points reliés : il a besoin d'être agrandi
-    // pour rester lisible à la taille d'un badge.
+    // Rendu 3D "glossy" généré par IA (image, pas de géométrie) — prioritaire
+    // sur le modèle .glb et le logo SVG extrudé tant qu'il est présent.
+    logoImage: 'images/logos/n8n.png',
     svgLogo: simpleIcon('n8n', 'EA4B71'),
     logoScale: 1.25
   },
@@ -104,6 +105,7 @@ export const stack = [
     description: 'Scripting, data processing, APIs',
     render: 'logoGltf',
     modelPath: '/models/python.glb',
+    logoImage: 'images/logos/python.png',
     svgLogo: simpleIcon('python', '3776AB')
   },
   {
