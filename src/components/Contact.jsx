@@ -1,26 +1,26 @@
 // src/components/Contact.jsx
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useForm, ValidationError } from '@formspree/react'
 import { Github, Linkedin, Mail, Send, CheckCircle2 } from 'lucide-react'
 import { profile } from '../data/profile'
 
+// Formulaire branché sur Formspree (https://formspree.io) via le SDK officiel :
+// site statique, pas de backend à héberger. Les messages arrivent directement
+// dans la boîte mail associée au formulaire (thomas.delos36@gmail.com).
+const FORMSPREE_FORM_ID = 'xbglarzp'
+
 export default function Contact() {
+  const [state, handleSubmit] = useForm(FORMSPREE_FORM_ID)
   const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // UI seulement : pas de backend branché ici.
-    // Pour rendre ce formulaire fonctionnel, connecte un service comme Formspree,
-    // EmailJS, ou une fonction serverless de ton choix.
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
-    setForm({ name: '', email: '', message: '' })
-  }
+  useEffect(() => {
+    if (state.succeeded) setForm({ name: '', email: '', message: '' })
+  }, [state.succeeded])
 
   return (
     <section id="contact" className="relative min-h-screen w-full flex items-center px-6 py-24">
@@ -51,8 +51,11 @@ export default function Contact() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
-              <label className="text-xs uppercase tracking-wider text-muted mb-2 block">Nom</label>
+              <label htmlFor="name" className="text-xs uppercase tracking-wider text-muted mb-2 block">
+                Nom
+              </label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 required
@@ -63,8 +66,11 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label className="text-xs uppercase tracking-wider text-muted mb-2 block">Email</label>
+              <label htmlFor="email" className="text-xs uppercase tracking-wider text-muted mb-2 block">
+                Email
+              </label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 required
@@ -73,12 +79,16 @@ export default function Contact() {
                 placeholder="vous@exemple.com"
                 className="w-full bg-ink/[0.03] border border-ink/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors"
               />
+              <ValidationError prefix="Email" field="email" errors={state.errors} className="text-xs text-primary mt-1" />
             </div>
           </div>
 
           <div>
-            <label className="text-xs uppercase tracking-wider text-muted mb-2 block">Message</label>
+            <label htmlFor="message" className="text-xs uppercase tracking-wider text-muted mb-2 block">
+              Message
+            </label>
             <textarea
+              id="message"
               name="message"
               required
               rows={5}
@@ -87,15 +97,23 @@ export default function Contact() {
               placeholder="Votre message..."
               className="w-full bg-ink/[0.03] border border-ink/10 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-colors resize-none"
             />
+            <ValidationError prefix="Message" field="message" errors={state.errors} className="text-xs text-primary mt-1" />
           </div>
+
+          <ValidationError errors={state.errors} className="text-xs text-primary" />
 
           <button
             type="submit"
+            disabled={state.submitting}
             className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-primary text-white hover:bg-primary/80 transition-colors font-medium shadow-glow disabled:opacity-60"
           >
-            {sent ? (
+            {state.succeeded ? (
               <>
                 <CheckCircle2 size={18} /> Message envoyé
+              </>
+            ) : state.submitting ? (
+              <>
+                <Send size={18} /> Envoi en cours...
               </>
             ) : (
               <>
