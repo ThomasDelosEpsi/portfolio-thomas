@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thomasdelosepsi.github.io/portfolio-thomas/sitemap.xml
