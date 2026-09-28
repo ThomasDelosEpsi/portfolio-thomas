@@ -41,12 +41,16 @@ export default function Hero() {
         <AvatarScene />
       </motion.div>
 
+      {/* Voile de contraste : sur mobile le portrait sert de fond plein écran derrière
+          le texte, donc sans ce dégradé le titre devient illisible sur le visage. */}
+      <div className="absolute inset-0 z-[5] bg-gradient-to-b from-bg via-bg/85 to-bg/50 md:hidden pointer-events-none" />
+
       <div className="section-content relative z-10 min-h-screen flex items-center px-6 md:px-10 pt-28 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-xl"
+          className="max-w-xl md:max-w-[42vw] lg:max-w-[40vw] xl:max-w-[38vw] 2xl:max-w-xl"
         >
           <p className="uppercase tracking-[0.3em] text-secondary text-xs md:text-sm mb-4">
             {profile.title}

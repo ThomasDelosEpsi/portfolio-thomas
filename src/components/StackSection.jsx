@@ -5,7 +5,7 @@ import StackScene from './StackScene'
 
 export default function StackSection() {
   return (
-    <section id="stack" className="relative w-full flex flex-col items-center justify-center px-6 py-24">
+    <section id="stack" className="relative w-full flex flex-col items-center justify-center px-6 sm:pr-20 md:pr-24 py-24">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

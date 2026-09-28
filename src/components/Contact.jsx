@@ -23,7 +23,7 @@ export default function Contact() {
   }, [state.succeeded])
 
   return (
-    <section id="contact" className="relative min-h-screen w-full flex items-center px-6 py-24">
+    <section id="contact" className="relative min-h-screen w-full flex items-center px-6 sm:pr-20 md:pr-24 py-24">
       <div className="section-content max-w-3xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

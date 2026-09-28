@@ -4,7 +4,7 @@ import { about, profile } from '../data/profile'
 
 export default function About() {
   return (
-    <section id="about" className="relative min-h-screen w-full flex items-center px-6 py-24">
+    <section id="about" className="relative min-h-screen w-full flex items-center px-6 sm:pr-20 md:pr-24 py-24">
       <div className="section-content max-w-4xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -15,7 +15,7 @@ export default function About() {
         >
           <span className="uppercase tracking-[0.3em] text-xs text-secondary">À propos</span>
           <h2 className="text-3xl md:text-4xl font-display font-semibold mt-3 mb-8">
-            Qui est <span className="text-gradient">{profile.name}</span> ?
+            Qui <span className="text-gradient">je suis</span>
           </h2>
 
           <div className="space-y-4 text-muted leading-relaxed text-base md:text-lg">
